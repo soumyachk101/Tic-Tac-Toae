@@ -138,7 +138,7 @@ def view_recent_games(limit=5):
     
     try:
         cur = conn.cursor()
-        cur.execute(f"""SELECT game_number, player_01, player_02, game_status, game_timeFROM tictactoe_gamesORDER BY game_time DESCLIMIT {limit};""")
+        cur.execute(f"""SELECT game_number, player_01, player_02, game_status, game_time FROM tictactoe_games ORDER BY game_time DESC LIMIT {limit};""")
         
         rows = cur.fetchall()
         if not rows:

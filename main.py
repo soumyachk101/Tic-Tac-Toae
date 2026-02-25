@@ -191,7 +191,7 @@ def input_screen():
         pygame.display.flip()
 
 def main():
-    global current_player, game_over, winner, player1_name, player2_name
+    global current_player, game_over, winner
 
     input_screen()
     screen.fill(BG_COLOR)
